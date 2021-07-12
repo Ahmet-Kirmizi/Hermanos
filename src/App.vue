@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img class="main-logo" src="@/assets/images/logo.png" alt="Hermanos Coffe" />
     <navbarTop/>
     <router-view></router-view>
   </div>
@@ -11,6 +10,9 @@ import navbarTop from '../src/components/navbarTop.vue'
 export default {
   components:{
     navbarTop,
+  },
+  mounted() {
+    this.$router.push({path: '/index'})
   }
 }
 </script>
