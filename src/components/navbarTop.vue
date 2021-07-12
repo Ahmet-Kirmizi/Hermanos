@@ -1,10 +1,8 @@
 <template>
-  <div>
+  <div id="navBar">
     <b-navbar toggleable="lg" variant="info">
       <b-navbar-brand class="navigation-main" style="font-size: 3rem">
-        ,
-        <a href=""><i class="fab fa-facebook"></i></a>
-        <router-link to="/">Hermanos</router-link>
+        <router-link to="index">Hermanos</router-link>
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse" class="navbar navbar-expand-lg">
       </b-navbar-toggle>
@@ -37,7 +35,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .navbar-toggler {
   background-color: white;
 }
@@ -97,10 +95,6 @@ a {
 a:hover {
   text-decoration: none;
   color: burlywood;
-}
-
-body {
-  background-image: url(../assets/images/bg-image4.jpg);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");

@@ -1,34 +1,37 @@
 <template >
-    <div>
-        <img src="@/assets/images/logo.png" alt="Hermanos Coffe">
-    </div>
+  <div>
+    <img class="main-logo" src="@/assets/images/logo.png" alt="Hermanos Coffe" />
+    <navbarTop/>
+  </div>
 </template>
 <script>
+import navbarTop from "../components/navbarTop.vue";
+
 export default {
-    component: {
-    }
-}
+  component: {
+    navbarTop,
+  },
+};
 </script>
 
 <style>
 
-div img {
-    vertical-align: middle;
-    border-style: none;
-    position:absolute;
-    width: auto;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
 
- }
+body{
+  background-image: url(../assets/images/bg-image4.jpg)
+}
 
- /* @media screen and (max-width: 990px){
-    div img{
-      top:70%;  
-    } 
- } */
+.main-logo {
+  vertical-align: middle;
+  border-style: none;
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
 </style>
 

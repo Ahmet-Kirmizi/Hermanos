@@ -1,6 +1,6 @@
 <template >
   <div>
-<menu-card/>
+<menuCard/>
   </div>
 </template>
 <script>

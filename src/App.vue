@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <navbarTop/>
-    </div>
+    <img class="main-logo" src="@/assets/images/logo.png" alt="Hermanos Coffe" />
+    <navbarTop/>
     <router-view></router-view>
   </div>
 </template>
@@ -15,3 +14,4 @@ export default {
   }
 }
 </script>
+

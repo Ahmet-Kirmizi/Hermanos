@@ -10,7 +10,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/index',
     name: 'index',
     component: index
   },
@@ -20,17 +20,17 @@ const routes = [
     component: menu
   },
   {
-    path: '/',
+    path: '/sepet',
     name: 'sepet',
     component: sepet
   },
   {
-    path: '/',
+    path: '/cuzdan',
     name: 'cuzdan',
     component: cuzdan
   },
   {
-    path: '/',
+    path: '/hesap',
     name: 'hesap',
     component: hesap
   },
