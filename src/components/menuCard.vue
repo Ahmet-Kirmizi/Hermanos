@@ -47,5 +47,4 @@ export default {
 .coffe-cards{
   padding:1rem;
 }
-
 </style>
