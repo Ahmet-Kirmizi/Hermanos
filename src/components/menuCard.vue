@@ -1,16 +1,19 @@
 <template >
   <div class="coffe-cards">
     <b-card
-      :title="title"
+      h-100
       :img-src=" imgSrc"
       img-alt="Image"
       img-top
       style="max-width: 15rem"
       class="mb-2"
     >
-    
+      <b-card-title>
+        <h2>{{ title }}</h2>
+      </b-card-title>
+
       <b-card-text>
-        {{ price }}
+       <h3>{{ price }}</h3>
       </b-card-text>
 
       <b-button href="#" variant="primary" v-on:click="register(title, price)"
@@ -46,5 +49,9 @@ export default {
 
 .coffe-cards{
   padding:1rem;
+}
+
+h3{
+  font-weight:400;
 }
 </style>

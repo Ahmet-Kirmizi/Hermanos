@@ -37,9 +37,6 @@ export default {
 
 <style scoped>
 
-#navbar{
-  z-index: 100;
-}
 
 .navbar-toggler {
   background-color: white;
