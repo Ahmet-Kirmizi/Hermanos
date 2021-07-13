@@ -2,7 +2,7 @@
   <div>
     <div class="container-fluid menu-box">
       <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 ">
-   <menuCard v-for="(card,index) in cards" :key="index" :title="card.product" :price="card.price"/>
+   <menuCard v-for="(card,index) in cards" :key="index" :title="card.product" :price="card.price" :img-src="card.imgurl"/>
       </div>
   </div>
   </div>
@@ -17,46 +17,19 @@ export default {
   data() {
     return {
       cards: [
-        { product: "cappuccino", price: "20.00TL" },
-        { product: "latte", price: "21.00TL" },
-        { product: "americano", price: "22.00TL" },
-        { product: "espresso", price: "23.00TL" },
-        { product: "cappuccino", price: "20.00TL" },
-        { product: "latte", price: "21.00TL" },
-        { product: "americano", price: "22.00TL" },
-        { product: "espresso", price: "23.00TL" },
-        { product: "cappuccino", price: "20.00TL" },
-        { product: "latte", price: "21.00TL" },
-        { product: "americano", price: "22.00TL" },
-        { product: "espresso", price: "23.00TL" },
-         { product: "cappuccino", price: "20.00TL" },
-        { product: "latte", price: "21.00TL" },
-        { product: "americano", price: "22.00TL" },
-        { product: "espresso", price: "23.00TL" },
-        { product: "cappuccino", price: "20.00TL" },
-        { product: "latte", price: "21.00TL" },
-        { product: "americano", price: "22.00TL" },
-        { product: "espresso", price: "23.00TL" },
-        { product: "cappuccino", price: "20.00TL" },
-        { product: "latte", price: "21.00TL" },
-        { product: "americano", price: "22.00TL" },
-        { product: "espresso", price: "23.00TL" },
-         { product: "cappuccino", price: "20.00TL" },
-        { product: "latte", price: "21.00TL" },
-        { product: "americano", price: "22.00TL" },
-        { product: "espresso", price: "23.00TL" },
-        { product: "cappuccino", price: "20.00TL" },
-        { product: "latte", price: "21.00TL" },
-        { product: "americano", price: "22.00TL" },
-        { product: "espresso", price: "23.00TL" },
-        { product: "cappuccino", price: "20.00TL" },
-        { product: "latte", price: "21.00TL" },
-        { product: "americano", price: "22.00TL" },
-        { product: "espresso", price: "23.00TL" },
+        { product: "cappuccino", price: "20.00TL", imgurl: "../assets/images/cappuccino.jpg",},
+        { product: "latte", price: "21.00TL", imgurl: "../assets/images/cappuccino.jpg",},
+        { product: "americano", price: "22.00TL", imgurl: "../assets/images/cappuccino.jpg",},
+        { product: "espresso", price: "23.00TL", imgurl: "../assets/images/cappuccino.jpg",},
+        { product: "cappuccino", price: "20.00TL", imgurl: "../assets/images/cappuccino.jpg",},
+        { product: "latte", price: "21.00TL", imgurl: "../assets/images/cappuccino.jpg",},
+        { product: "americano", price: "22.00TL", imgurl: "../assets/images/cappuccino.jpg",},
+        
       ]
     };
   },
 };
+
 </script>
 
 <style>
@@ -71,7 +44,5 @@ export default {
     padding: 50px;
 }
 
-::-webkit-scrollbar {
-    overflow-y:scroll;
-}
+
 </style>

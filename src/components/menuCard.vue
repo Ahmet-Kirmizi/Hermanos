@@ -2,13 +2,13 @@
   <div class="coffe-cards">
     <b-card
       :title="title"
-      img-src="../assets/images/cappuccinobg.png"
+      :img-src=" imgSrc"
       img-alt="Image"
       img-top
-      tag="article"
       style="max-width: 15rem"
       class="mb-2"
     >
+    
       <b-card-text>
         {{ price }}
       </b-card-text>
@@ -26,9 +26,9 @@ export default {
   name: "menuCard",
   props: {
     title: String,
-    imgUrl: String,
     price: String,
     product: String,
+    imgSrc:String,
   },
   methods: {
     register: function (productname, price) {
