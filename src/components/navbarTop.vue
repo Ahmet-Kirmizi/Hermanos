@@ -36,6 +36,11 @@ export default {
 </script>
 
 <style scoped>
+
+#navbar{
+  z-index: 100;
+}
+
 .navbar-toggler {
   background-color: white;
 }
@@ -113,6 +118,8 @@ a:hover {
     height: 80vh;
   }
 }
+
+
 </style>
 
 

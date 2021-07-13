@@ -1,7 +1,8 @@
 <template >
   <div>
-    <img class="main-logo" src="@/assets/images/logo.png" alt="Hermanos Coffe" />
     <navbarTop/>
+    <img class="main-logo" src="@/assets/images/logo.png" alt="Hermanos Coffe" />
+    
   </div>
 </template>
 <script>
@@ -14,12 +15,7 @@ export default {
 };
 </script>
 
-<style>
-
-
-body{
-  background-image: url(../assets/images/bg-image4.jpg)
-}
+<style >
 
 .main-logo {
   vertical-align: middle;
