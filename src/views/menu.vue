@@ -17,13 +17,13 @@ export default {
   data() {
     return {
       cards: [
-        { product: "cappuccino", price: "20.00TL", imgurl: "../assets/images/cappuccino.jpg",},
-        { product: "latte", price: "21.00TL", imgurl: "../assets/images/cappuccino.jpg",},
-        { product: "americano", price: "22.00TL", imgurl: "../assets/images/cappuccino.jpg",},
-        { product: "espresso", price: "23.00TL", imgurl: "../assets/images/cappuccino.jpg",},
-        { product: "cappuccino", price: "20.00TL", imgurl: "../assets/images/cappuccino.jpg",},
-        { product: "latte", price: "21.00TL", imgurl: "../assets/images/cappuccino.jpg",},
-        { product: "americano", price: "22.00TL", imgurl: "../assets/images/cappuccino.jpg",},
+        { product: "cappuccino", price: "20.00TL", imgurl: "https://globalassets.starbucks.com/assets/5c515339667943ce84dc56effdf5fc1b.jpg?impolicy=1by1_wide_1242",},
+        { product: "latte", price: "21.00TL", imgurl: "https://globalassets.starbucks.com/assets/5c515339667943ce84dc56effdf5fc1b.jpg?impolicy=1by1_wide_1242",},
+        { product: "americano", price: "22.00TL", imgurl: "https://globalassets.starbucks.com/assets/5c515339667943ce84dc56effdf5fc1b.jpg?impolicy=1by1_wide_1242",},
+        { product: "espresso", price: "23.00TL", imgurl: "https://globalassets.starbucks.com/assets/5c515339667943ce84dc56effdf5fc1b.jpg?impolicy=1by1_wide_1242",},
+        { product: "cappuccino", price: "20.00TL", imgurl: "https://globalassets.starbucks.com/assets/5c515339667943ce84dc56effdf5fc1b.jpg?impolicy=1by1_wide_1242",},
+        { product: "latte", price: "21.00TL", imgurl: "https://globalassets.starbucks.com/assets/5c515339667943ce84dc56effdf5fc1b.jpg?impolicy=1by1_wide_1242",},
+        { product: "americano", price: "22.00TL", imgurl: "https://globalassets.starbucks.com/assets/5c515339667943ce84dc56effdf5fc1b.jpg?impolicy=1by1_wide_1242",},
         
       ]
     };
@@ -42,6 +42,7 @@ export default {
     top: 25%;
     right:5%;
     padding: 50px;
+    z-index: -1;
 }
 
 
