@@ -14,6 +14,8 @@
                 <input required type="password" id="loginPassword" placeholder="**********" />
                 <button type="submit">Giriş</button>
             </form>
+            <!-- <img src="../assets/images/cappuccino.jpg" > -->
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
         <div class="tabcontent" id="signup">
             <form>
@@ -178,11 +180,7 @@ tab styles
 }
 
 
-/*
 
-device specific styles
-
-*/
 
 @media only screen and (min-width: 1224px) {
     div.container {
@@ -191,9 +189,10 @@ device specific styles
     }
 }
 
-@media only screen and (min-width: 1824px) {
+@media only screen and (min-width: 1224px) {
     div.container {
-        width: 400px;
+        width: 700px;
+        
     }
 }
 

@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import index from '../views/index.vue'
 import menu from '../views/menu.vue'
 import sepet from '../views/sepet.vue'
-import cuzdan from '../views/hesap.vue'
+import cuzdan from '../views/cuzdan.vue'
 import hesap from '../views/hesap.vue'
 
 Vue.use(VueRouter)
