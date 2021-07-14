@@ -81,7 +81,7 @@
           </button>
         </div>
         <div>
-          <button type="button" class="btn btn-primary sepet-btn">
+          <button type="button" class="btn btn-success sepet-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -274,7 +274,7 @@ export default {
   position: absolute;
   width: 90%;
   height: 100%;
-  background-color: #9e5e3b2a;
+  background-color: #9e5e3b69;
   top: 25%;
   right: 5%;
   padding: 50px;
@@ -296,9 +296,9 @@ body {
 }
 
 .btn-primary {
-  background-color: #9e5e3b;
+  border-color:white;
+  /* background-color: #1b73d8; */
 }
-
 .input-group {
   width: 30%;
 }
@@ -323,6 +323,7 @@ body {
 .container-buttons .button-group div {
   padding-left: 3rem;
 }
+
 
 @media screen and (max-width: 1200px){
   .input-group {
