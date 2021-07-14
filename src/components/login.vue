@@ -1,6 +1,7 @@
 <template >
-
-    <div class="container">
+    <div>
+    <div class="container login-box">
+        <div class="loginsbox">
         <div class="tab">
             <div class="tablinks" id="logintab" data-form-id="login">Giriş</div>
             <div class="tablinks" id="signuptab" data-form-id="signup">Kaydol</div>
@@ -32,6 +33,8 @@
                 <button type="submit">Sign up</button>
             </form>
         </div>
+    </div>
+    </div>
     </div>
 </template>
 
@@ -80,7 +83,7 @@ Container div
 */
 
 div.container {
-    margin: 4em auto 2em auto;
+  
     padding: 1em;
     overflow: hidden;
     border: 2px solid black;
@@ -200,8 +203,8 @@ device specific styles
     }
 }
 
-.tabcontent {
-  overflow: scroll;
+#element::-webkit-scrollbar {
+    display: none;
 }
 
 </style>

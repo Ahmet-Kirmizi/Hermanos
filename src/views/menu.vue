@@ -268,12 +268,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .menu-box {
   display: flex;
   position: absolute;
   width: 90%;
-  height: 100%;
+  height: 75%;
   background-color: #9e5e3b69;
   top: 25%;
   right: 5%;
