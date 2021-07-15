@@ -12,10 +12,10 @@
                 <input required type="email" id="loginEmail" placeholder="isim@gmail.com" />
                 <label for="loginPassword">Parola:</label>
                 <input required type="password" id="loginPassword" placeholder="**********" />
-                <button type="submit">Giriş</button>
+                <button type="submit" class="btn btn-success">Giriş</button>
             </form>
-            <!-- <img src="../assets/images/cappuccino.jpg" > -->
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <!-- <img src="../assets/images/coffecircle.jpg" width="50%" > -->
+            <br><br><br><br><br><br><br><br><br><br><br>
         </div>
         <div class="tabcontent" id="signup">
             <form>
@@ -32,7 +32,7 @@
                 <label for="signupConfirmPasssword">Parola Tekrarla:</label>
                 <input required type="password" id="signupConfirmPasssword" placeholder="**********" />
                 
-                <button type="submit">Sign up</button>
+                <button type="submit" class="btn btn-primary kayıtol">Kayıt ol</button>
             </form>
         </div>
     </div>
@@ -80,6 +80,10 @@ body {
 }
 
 
+div.tab{
+    margin-top:5% ;
+}
+
 /*
 Container div
 */
@@ -88,8 +92,10 @@ div.container {
   
     padding: 1em;
     overflow: hidden;
-    border: 2px solid black;
-    background: rgba(255, 255, 255, 0.822);
+    border: 2px solid rgb(0, 0, 0);
+    /* background: rgba(255, 255, 255, 0.822); */
+    background-image: url(../assets/images/anan4.jpg);
+    background-repeat: no-repeat;
 }
 
 
@@ -121,13 +127,13 @@ div.container input {
 
 div.container button {
     outline: none;
-    margin: 2em auto 1em auto;
+    margin: 2em auto auto;
     padding: 1.2em;
     cursor: pointer;
     letter-spacing: 0.2em;
     box-shadow: 0 0 2px 2px #888;
-    background-color: black;
-    color: white;
+    /* background-color: rgb(69, 218, 24); */
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
 }
@@ -150,16 +156,26 @@ tab styles
     width: 50%;
     text-align: center;
     cursor: pointer;
-    border: 0.4px solid black;
+    border: 0.4px solid rgb(255, 255, 255);
     transition: all 0.2s linear;
+    color: white;
+    font-weight: 500;
+    background: #000;
+    opacity:75% ;
 }
 
 .active {
     animation-name: activetab;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    opacity: 100%;
+}
+
+form{
+    background: rgba(0, 0, 0, 0.466);
 }
 
 @keyframes activetab {
@@ -177,22 +193,18 @@ tab styles
     display: none;
     padding: 2em 0 2em 0;
     overflow: hidden;
+    color: #ffffff;
+    font-weight: 800;
+    opacity: 100%;
 }
 
 
 
 
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: 480px) {
     div.container {
         overflow: hidden;
-        width: 400px;
-    }
-}
-
-@media only screen and (min-width: 1224px) {
-    div.container {
-        width: 700px;
-        
+        width: 640px;
     }
 }
 
