@@ -161,7 +161,7 @@ tab styles
     color: white;
     font-weight: 500;
     background: #000;
-    opacity:75% ;
+    /* opacity:75% ; */
 }
 
 .active {
@@ -171,7 +171,7 @@ tab styles
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     font-weight: 600;
-    opacity: 100%;
+    /* opacity: 100%; */
 }
 
 /* form{
@@ -195,7 +195,7 @@ tab styles
     overflow: hidden;
     color: #ffffff;
     font-weight: 800;
-    opacity: 100%;
+    /* opacity: 100%; */
 }
 
 
