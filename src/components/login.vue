@@ -94,7 +94,7 @@ div.container {
     overflow: hidden;
     border: 2px solid rgb(0, 0, 0);
     /* background: rgba(255, 255, 255, 0.822); */
-    /* background-image: url(../assets/images/anan4.jpg); */
+    background-image: url(../assets/images/anan4.jpg);
     background-repeat: no-repeat;
 }
 
