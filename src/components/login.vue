@@ -26,7 +26,7 @@
             />
             <button type="submit" class="btn btn-success">Giriş</button>
           </form>
-          <!-- <img class="signinpicture d-flex" src="../assets/images/luke.jpg" width="50%" > -->
+          <img class="signinpicture d-flex" src="../assets/images/luke.jpg" width="50%" >
           <br>
           
         </div>
@@ -124,6 +124,10 @@ body {
     flex-direction: column;
 }
 
+div.tab{
+  width: 82%;
+}
+
 div.tab {
   margin-top: 5%;
 }
@@ -134,8 +138,9 @@ div.container {
   /* background: rgba(255, 255, 255, 0.822); */
   /* background-image:url(../assets/images/anan4.jpg) ; */
   /* background: white; */
-  background-color:rgba(255, 255, 255, 0);
+  background-color:rgb(255, 255, 255);
   background-repeat: no-repeat;
+  border-radius: 4%;
 }
 
 div.container label,
@@ -154,7 +159,7 @@ div.container input {
   padding: 0.8em 0 0.8em 0.8em;
   outline: none;
   border: none;
-  border-bottom: 2px solid rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(0, 0, 0);
   margin: 0.5em auto 0.5em auto;
 }
 
@@ -166,6 +171,7 @@ div.container button {
   letter-spacing: 0.2em;
   box-shadow: 0 0 2px 2px #888;
   color: rgb(255, 255, 255);
+  font-weight: 600;
   border: none;
   border-radius: 5px;
 }
@@ -214,9 +220,9 @@ div.container button {
   width: 100%;
   margin: 0 auto 0 auto;
   display: none;
-  padding: 2em 0 2em 0;
+  
   overflow: hidden;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-weight: 800;
 }
 
