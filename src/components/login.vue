@@ -174,9 +174,9 @@ tab styles
     opacity: 100%;
 }
 
-form{
+/* form{
     background: rgba(0, 0, 0, 0.466);
-}
+} */
 
 @keyframes activetab {
     from {
