@@ -296,7 +296,7 @@ body {
 }
 
 .btn-primary {
-  border-color:white;
+  border:none;
   /* background-color: #1b73d8; */
 }
 .input-group {

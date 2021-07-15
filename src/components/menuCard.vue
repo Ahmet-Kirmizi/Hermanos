@@ -6,7 +6,7 @@
       img-alt="Image"
       img-top
       style="max-width: 15rem"
-      class="mb-2"
+      class="mb-2 kart"
     >
       <b-card-title>
         <h2>{{ title }}</h2>
@@ -53,5 +53,9 @@ export default {
 
 h3{
   font-weight:400;
+}
+
+.kart{
+  border: none;
 }
 </style>

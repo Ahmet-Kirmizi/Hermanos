@@ -26,8 +26,9 @@
             />
             <button type="submit" class="btn btn-success">Giriş</button>
           </form>
-          <!-- <img src="../assets/images/coffecircle.jpg" width="50%" > -->
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <!-- <img class="signinpicture d-flex" src="../assets/images/luke.jpg" width="50%" > -->
+          <br>
+          
         </div>
         <div class="tabcontent" id="signup">
           <form>
@@ -117,6 +118,12 @@ body {
   font-weight: bolder;
 }
 
+.signinpicture{
+    /* margin-top: ; */
+    margin: auto;
+    flex-direction: column;
+}
+
 div.tab {
   margin-top: 5%;
 }
@@ -124,9 +131,10 @@ div.tab {
 div.container {
   padding: 1em;
   overflow: hidden;
-  border: 2px solid rgb(0, 0, 0);
   /* background: rgba(255, 255, 255, 0.822); */
-  background: white;
+  /* background-image:url(../assets/images/anan4.jpg) ; */
+  /* background: white; */
+  background-color:rgba(255, 255, 255, 0);
   background-repeat: no-repeat;
 }
 
@@ -146,13 +154,13 @@ div.container input {
   padding: 0.8em 0 0.8em 0.8em;
   outline: none;
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgb(255, 255, 255);
   margin: 0.5em auto 0.5em auto;
 }
 
 div.container button {
   outline: none;
-  margin: 2em auto auto;
+  margin: 2em auto 2em auto;
   padding: 1.2em;
   cursor: pointer;
   letter-spacing: 0.2em;
@@ -208,7 +216,7 @@ div.container button {
   display: none;
   padding: 2em 0 2em 0;
   overflow: hidden;
-  color: #000;
+  color: rgb(255, 255, 255);
   font-weight: 800;
 }
 
