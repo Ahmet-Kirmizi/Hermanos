@@ -20,9 +20,9 @@
         <div class="tabcontent" id="signup">
             <form>
                 <label for="signupName">İsim:</label>
-                <input required type="name" id="signupName" placeholder="Abdurrazak" />
+                <input required type="name" id="signupName" placeholder="Arda" />
                 <label for="signupSurname">Soyisim:</label>
-                <input required type="surname" id="signupsurname" placeholder="kıllı-bacak" />
+                <input required type="surname" id="signupsurname" placeholder="turker" />
                 <label for="signupEmail">Email:</label>
                 <input required type="email" id="signupEmail" placeholder="isim@gmail.com" />
                 <label for="signupPhone">Telefon:</label>
