@@ -126,7 +126,7 @@ div.container {
   overflow: hidden;
   border: 2px solid rgb(0, 0, 0);
   /* background: rgba(255, 255, 255, 0.822); */
-  background-image: url(../assets/images/anan4.jpg);
+  background: white;
   background-repeat: no-repeat;
 }
 
@@ -173,25 +173,25 @@ div.container button {
   width: 50%;
   text-align: center;
   cursor: pointer;
-  border: 0.4px solid rgb(255, 255, 255);
+  border: 0.4px solid rgb(0, 0, 0);
   transition: all 0.2s linear;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: 500;
-  background: #000;
+  background: rgb(255, 255, 255);
 }
 
 .active {
   animation-name: activetab;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-weight: 600;
 }
 
-form {
+/* form {
   background: rgba(0, 0, 0, 0.466);
-}
+} */
 
 @keyframes activetab {
   from {
@@ -208,7 +208,7 @@ form {
   display: none;
   padding: 2em 0 2em 0;
   overflow: hidden;
-  color: #ffffff;
+  color: #000;
   font-weight: 800;
 }
 
