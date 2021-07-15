@@ -176,7 +176,7 @@ div.container button {
   color: white;
   font-weight: 500;
   background: #000;
-  /* opacity: 75%; */
+  opacity: 75%;
 }
 
 .active {
@@ -186,7 +186,7 @@ div.container button {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-weight: 600;
-  /* opacity: 100%; */
+  opacity: 100%;
 }
 
 form {
@@ -210,7 +210,7 @@ form {
   overflow: hidden;
   color: #ffffff;
   font-weight: 800;
-  /* opacity: 100%; */
+  opacity: 100%;
 }
 
 @media only screen and (min-width: 480px) {
