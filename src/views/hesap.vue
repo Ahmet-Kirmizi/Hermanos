@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <loginPage/>
     </div>
 </template>
@@ -12,4 +13,7 @@ export default {
 }
 </script>
 <style >
+navbarTop{
+    display: none;
+}
 </style>

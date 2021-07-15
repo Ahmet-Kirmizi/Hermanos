@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "h": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "serve":"serve -s dist"
   },
   "dependencies": {
     "bootstrap-icons": "^1.5.0",
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
     "request": "^2.79.0",
+    "serve": "^12.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },

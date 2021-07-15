@@ -5,10 +5,16 @@ import menu from '../views/menu.vue'
 import sepet from '../views/sepet.vue'
 import cuzdan from '../views/cuzdan.vue'
 import hesap from '../views/hesap.vue'
+// import login from '../views/login.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+  // {
+  //   path: '/login',
+  //   name: 'login',
+  //   component: login
+  // },
   {
     path: '/index',
     name: 'index',
