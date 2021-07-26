@@ -24,7 +24,14 @@
               id="loginPassword"
               placeholder="**********"
             />
-            <button type="submit" class="btn btn-success">Giriş</button>
+            <button
+              v-on:click = "girisDisplay()"
+              type="submit"
+              id="giris"
+              class="btn btn-success"
+            >
+              Giriş
+            </button>
           </form>
           <img
             class="signinpicture d-flex"
@@ -108,11 +115,15 @@ export default {
     }
     document.getElementById("logintab").click();
   },
-
+  methods: {
+    girisDisplay:function(){
+      document.getElementById("hesap").style.display = "none"
+    }
+  },
 };
 </script>
 
-<style scoped>
+<style>
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 body {
   margin: 0 auto;
@@ -126,11 +137,8 @@ body {
   flex-direction: column;
 }
 
-div.tab.si
-
-div.tab {
+div.tab.si div.tab {
   width: 87%;
-  
 }
 
 div.tab {
