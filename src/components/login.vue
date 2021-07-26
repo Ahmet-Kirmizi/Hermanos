@@ -1,4 +1,4 @@
-<template >
+<template>
   <div>
     <div class="container login-box">
       <div class="loginsbox">
@@ -26,9 +26,12 @@
             />
             <button type="submit" class="btn btn-success">Giriş</button>
           </form>
-          <img class="signinpicture d-flex" src="../assets/images/luke.jpg" width="50%" >
-          <br>
-          
+          <img
+            class="signinpicture d-flex"
+            src="../assets/images/luke.jpg"
+            width="50%"
+          />
+          <br />
         </div>
         <div class="tabcontent" id="signup">
           <form>
@@ -105,9 +108,8 @@ export default {
     }
     document.getElementById("logintab").click();
   },
+
 };
-
-
 </script>
 
 <style scoped>
@@ -118,14 +120,17 @@ body {
   font-weight: bolder;
 }
 
-.signinpicture{
-    /* margin-top: ; */
-    margin: auto;
-    flex-direction: column;
+.signinpicture {
+  /* margin-top: ; */
+  margin: auto;
+  flex-direction: column;
 }
 
-div.tab{
-  width: 82%;
+div.tab.si
+
+div.tab {
+  width: 87%;
+  
 }
 
 div.tab {
@@ -138,9 +143,9 @@ div.container {
   /* background: rgba(255, 255, 255, 0.822); */
   /* background-image:url(../assets/images/anan4.jpg) ; */
   /* background: white; */
-  background-color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   background-repeat: no-repeat;
-  border-radius: 4%;
+  border-radius: 35px;
 }
 
 div.container label,
@@ -220,20 +225,20 @@ div.container button {
   width: 100%;
   margin: 0 auto 0 auto;
   display: none;
-  
+
   overflow: hidden;
   color: rgb(0, 0, 0);
   font-weight: 800;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 420px) {
   div.container {
     overflow: hidden;
     width: 640px;
   }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 420px) {
   div.container {
     width: 80%;
   }

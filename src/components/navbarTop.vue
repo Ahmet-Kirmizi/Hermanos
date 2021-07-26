@@ -23,16 +23,14 @@
           >
         </b-navbar-nav>
 
-        <!-- Right aligned nav items -->
       </b-collapse>
     </b-navbar>
-  </div>
+    </div>
 </template>
 <script>
 export default {
   name: "navbarTop",
-  components: {},
-};
+  components: {},};
 </script>
 
 <style scoped>
@@ -84,10 +82,10 @@ a {
   width: 60%;
 }
 
-.navbar-left-heading a {
-  font-size: 3rem;
-  color: white;
-}
+/* .navbar-left-heading a {
+  font-size: 5rem;
+  color: rgb(238, 0, 0);
+} */
 
 a {
   text-decoration: none;
