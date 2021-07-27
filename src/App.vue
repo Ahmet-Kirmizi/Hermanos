@@ -2,7 +2,7 @@
   <div id="app">
     <navbarTop />
     <backgroundImg />
-    <div> {{ info }} </div>
+    <!-- <div> {{ info }} </div> -->
     <router-view></router-view>
   </div>
 </template>

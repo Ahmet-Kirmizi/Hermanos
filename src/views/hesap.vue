@@ -1,22 +1,22 @@
 <template>
-  <div id="hesap">
-    <loginPage/>
-    <anaHesap/>
+  <div>
+    <div id="login-section">
+      <loginPage />
+    </div>
+    <div id="account-section">
+      <accountPage />
+    </div>
   </div>
 </template>
 <script>
 import loginPage from "../components/login.vue";
-import anaHesap from "../components/hesap.vue";
+import accountPage from "../components/account-page.vue";
 export default {
   components: {
     loginPage,
-    anaHesap
+    accountPage,
   },
 };
-
 </script>
 <style >
-navbarTop {
-  display: none;
-}
 </style>

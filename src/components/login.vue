@@ -117,13 +117,19 @@ export default {
   },
   methods: {
     girisDisplay:function(){
-      document.getElementById("hesap").style.display = "none"
+      document.getElementById("login-section").style.display = "none",
+      document.getElementById("account-section").style.display = "block"
     }
   },
 };
 </script>
 
 <style>
+
+#account-section{
+  display: none;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 body {
   margin: 0 auto;
@@ -146,7 +152,7 @@ div.tab {
 }
 
 div.container {
-  padding: 1em;
+  padding: 2em;
   overflow: hidden;
   /* background: rgba(255, 255, 255, 0.822); */
   /* background-image:url(../assets/images/anan4.jpg) ; */
@@ -154,6 +160,11 @@ div.container {
   background-color: rgb(255, 255, 255);
   background-repeat: no-repeat;
   border-radius: 35px;
+  height: 86vh;
+}
+
+div.container.login-box{
+  background-color: #DEB887;
 }
 
 div.container label,
