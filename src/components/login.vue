@@ -155,12 +155,17 @@ export default {
         retypepassword: this.retypepassword,
         telephone: this.telephone,
         address: this.address,
-      }).then(res => {console.log(res.data)});
+      }).then(res => {
+        console.log(res.data)
+        localStorage.setItem('token',res.data.token)
+        });
     },
     sendSignInData: function (){
       axios.post("http://192.168.70.125:3000/signIn", {
         email: this.email,
         password: this.password,
+      }).then(res => {
+        localStorage.setItem('tokenSignIn',res.data.token)
       })
     }
   },
