@@ -44,14 +44,17 @@
       />
     </svg>
     </div>
+    <!-- <loginForm/> -->
+    
   </div>
 </template>
 <script>
 import navbarTop from "../components/navbarTop.vue";
-
+import loginForm from "../components/login.vue"
 export default {
-  component: {
+  components: {
     navbarTop,
+    loginForm,
   },
 };
 </script>

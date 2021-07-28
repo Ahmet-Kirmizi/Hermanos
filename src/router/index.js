@@ -6,6 +6,7 @@ import menu from '../views/menu.vue'
 import sepet from '../views/sepet.vue'
 import cuzdan from '../views/cuzdan.vue'
 import hesap from '../views/hesap.vue'
+import login from '../views/login.vue'
 
 
 
@@ -37,6 +38,11 @@ const routes = [
     path: '/hesap',
     name: 'hesap',
     component: hesap
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: login
   },
   
 ]

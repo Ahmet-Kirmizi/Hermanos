@@ -1,18 +1,18 @@
 <template>
   <div>
     <div>
-      <accountPage/>
+      <loginForm/>
     </div>
   </div>
 </template>
 <script>
 import axios from 'axios';
-import accountPage from "../components/account-page.vue";
+import loginForm from "../components/login.vue";
 export default {
   components: {
-    accountPage,
+    loginForm,
   },
-};
+  }
 </script>
 <style >
 </style>

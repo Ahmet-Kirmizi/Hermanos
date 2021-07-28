@@ -103,7 +103,7 @@
 <script>
 import axios from 'axios'
 export default {
-  name: "loginform",
+  name: "loginForm",
   data() {
     return {
       name: null,
