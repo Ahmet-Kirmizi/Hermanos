@@ -2,7 +2,6 @@
   <div id="app">
     <navbarTop />
     <backgroundImg />
-    <!-- <div> {{ info }} </div> -->
     <router-view></router-view>
   </div>
 </template>
@@ -25,10 +24,8 @@ export default {
   },
   mounted() {
     this.$router.push({ path: "/index" });
-    axios.get(API_URL).then(response => (this.info = response))
   },
 };
-const API_URL = "http://192.168.70.125:3000/getSignUpDetails/signUp";
 </script>
 
 <style>

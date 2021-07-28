@@ -12,6 +12,7 @@
           <form>
             <label for="loginEmail">E-posta:</label>
             <input
+              v-model="email"
               required
               type="email"
               id="loginEmail"
@@ -19,13 +20,14 @@
             />
             <label for="loginPassword">Parola:</label>
             <input
+              v-model="password"
               required
               type="password"
               id="loginPassword"
               placeholder="**********"
             />
             <button
-              v-on:click = "girisDisplay()"
+              v-on:click="sendSignInData()"
               type="submit"
               id="giris"
               class="btn btn-success"
@@ -43,9 +45,10 @@
         <div class="tabcontent" id="signup">
           <form>
             <label for="signupName">İsim:</label>
-            <input required type="name" id="signupName" placeholder="Arda" />
+            <input required type="name" id="signupName " placeholder="Arda" v-model="name"/>
             <label for="signupSurname">Soyisim:</label>
             <input
+             v-model="surname"
               required
               type="surname"
               id="signupsurname"
@@ -53,15 +56,17 @@
             />
             <label for="signupEmail">Email:</label>
             <input
+              v-model="email"
               required
               type="email"
               id="signupEmail"
               placeholder="isim@gmail.com"
             />
             <label for="signupPhone">Telefon:</label>
-            <input required type="phone" id="signup" placeholder="(90 +)" />
+            <input required type="phone" id="signup" placeholder="(90 +)" v-model="telephone" />
             <label for="signupPassword">Parola:</label>
             <input
+              v-model="password"
               required
               type="password"
               id="signupPassword"
@@ -69,13 +74,22 @@
             />
             <label for="signupConfirmPasssword">Parola Tekrarla:</label>
             <input
+             v-model="retypepassword"
               required
               type="password"
               id="signupConfirmPasssword"
               placeholder="**********"
             />
 
-            <button type="submit" class="btn btn-primary kayıtol">
+             <label for="signupAddress">Address:</label>
+            <input
+              v-model="address"
+              type="address"
+              id="signupAddress"
+              placeholder="Lekosa Sehitpolat ali sokak no.2 apt."
+            />
+
+            <button v-on:click="sendData()" type="submit" class="btn btn-primary kayıtol ">
               Kayıt ol
             </button>
           </form>
@@ -87,8 +101,20 @@
 
 
 <script>
+import axios from 'axios'
 export default {
   name: "loginform",
+  data() {
+    return {
+      name: null,
+      surname: null,
+      email: null,
+      password: null,
+      retypepassword: null,
+      telephone: null,
+      address:null,
+    };
+  },
   mounted() {
     var tablinks = document.querySelectorAll("div.tablinks");
 
@@ -116,17 +142,33 @@ export default {
     document.getElementById("logintab").click();
   },
   methods: {
-    girisDisplay:function(){
-      document.getElementById("login-section").style.display = "none",
-      document.getElementById("account-section").style.display = "block"
+    girisDisplay: function () {
+      (document.getElementById("login-section").style.display = "none"),
+        (document.getElementById("account-section").style.display = "block");
+    },
+    sendData: function () {
+      axios.post("http://192.168.70.125:3000/getSignUpDetails/signUp", {
+        name: this.name,
+        surname: this.surname,
+        email: this.email,
+        password: this.password,
+        retypepassword: this.retypepassword,
+        telephone: this.telephone,
+        address: this.address,
+      }).then(res => {console.log(res.data)});
+    },
+    sendSignInData: function (){
+      axios.post("http://192.168.70.125:3000/signIn", {
+        email: this.email,
+        password: this.password,
+      })
     }
   },
 };
 </script>
 
 <style>
-
-#account-section{
+#account-section {
   display: none;
 }
 
@@ -163,8 +205,8 @@ div.container {
   height: 86vh;
 }
 
-div.container.login-box{
-  background-color: #DEB887;
+div.container.login-box {
+  background-color: #deb887;
 }
 
 div.container label,
