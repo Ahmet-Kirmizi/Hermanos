@@ -165,7 +165,8 @@ export default {
         email: this.email,
         password: this.password,
       }).then(res => {
-        localStorage.setItem('tokenSignIn',res.data.token)
+        console.log(res.data)
+        localStorage.setItem('tokenSignIn',res.data.signInToken)
       })
     }
   },
