@@ -1,54 +1,63 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
-import VueRouter from 'vue-router'
-import index from '../views/index.vue'
-import menu from '../views/menu.vue'
-import sepet from '../views/sepet.vue'
-import cuzdan from '../views/cuzdan.vue'
-import hesap from '../views/hesap.vue'
-import login from '../views/login.vue'
+import Router from 'vue-router'
+import store from '../store'
+
+import Login from '../components/Login'
+import Dashboard from '../components/Dashboard'
+import Movies from '../components/Movies'
+
+import guest from './middleware/guest'
+import auth from './middleware/auth'
+import isSubscribed from './middleware/isSubscribed'
 
 
+Vue.use(Router)
 
-Vue.use(VueRouter)
+const router = new Router({
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes: [{
+            path: '/login',
+            name: 'login',
+            component: Login,
+            meta: {
+                middleware: [
+                    guest
+                ]
+            }
+        },
 
-const routes = [
-
-  {
-    path: '/index',
-    name: 'index',
-    component: index
-  },
-  {
-    path: '/menu',
-    name: 'menu',
-    component: menu
-  },
-  {
-    path: '/sepet',
-    name: 'sepet',
-    component: sepet
-  },
-  {
-    path: '/cuzdan',
-    name: 'cuzdan',
-    component: cuzdan
-  },
-  {
-    path: '/hesap',
-    name: 'hesap',
-    component: hesap
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: login
-  },
-  
-]
-
-const router = new VueRouter({
-  routes
+        {
+            path: '/dashboard',
+            name: 'dashboard',
+            component: Dashboard,
+            meta: {
+                middleware: [
+                    auth
+                ]
+            },
+        }
+    ]
 })
 
+
 export default router
+
+const router = new Router({ ...})
+
+router.beforeEach((to, from, next) => {
+    if (!to.meta.middleware) {
+        return next()
+    }
+    const middleware = to.meta.middleware
+
+    const context = {
+        to,
+        from,
+        next,
+        store
+    }
+    return middleware[0]({
+        ...context
+    })
+})
