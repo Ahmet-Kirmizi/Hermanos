@@ -23,7 +23,12 @@ export default {
     backgroundImg,
   },
   mounted() {
-    this.$router.push({ path: "/index" });
+    if (localStorage.tokenSignIn) {
+      this.$router.push({ path: "/menu" });
+    }
+    else{
+      this.$router.push({ path: "/login" });
+    }
   },
 };
 </script>
