@@ -1,5 +1,5 @@
 <template >
-  <div class="coffe-cards">
+  <div class="coffe-cards col-lg-2 col-sm-6 col-12">
     <b-card
       h-100
       :img-src=" imgSrc"
@@ -25,7 +25,10 @@
 
 
 <script>
+const API_GETCARDDATA = "http://192.168.70.125:3000/menu"
+
 export default {
+  
   name: "menuCard",
   props: {
     title: String,
@@ -38,6 +41,7 @@ export default {
       console.log(productname, price);
     },
   },
+
 };
 </script>
 

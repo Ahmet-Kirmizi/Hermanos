@@ -10,7 +10,6 @@
         </span>
       </div>
       <div class="button-group">
-       
         <div>
           <button type="button" class="btn btn-primary kredi-btn">
             <svg
@@ -55,7 +54,7 @@
             Adres
           </button>
         </div>
-         <div>
+        <div>
           <button type="button" class="btn btn-primary bakiye-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -100,28 +99,21 @@
       </div>
     </div>
     <div class="container-fluid menu-box">
-      <div
-        class="
-          row
-          row-cols-xs-1
-          row-cols-sm-2
-          row-cols-md-3
-          row-cols-lg-4
-          row-cols-xl-6
-        "
-      >
-        <menuCard
-          v-for="(card, index) in cards"
+      <div class="row">
+         <menuCard
+          v-for="(card, index) in menuCardData"
           :key="index"
-          :title="card.product"
+          :title="card.name"
           :price="card.price"
-          :img-src="card.imgurl"
+          :img-src="card.url"
         />
+
       </div>
     </div>
   </div>
 </template>
 <script>
+import axios from 'axios'
 import menuCard from "../components/menuCard.vue";
 export default {
   components: {
@@ -129,141 +121,17 @@ export default {
   },
   data() {
     return {
-      cards: [
-        {
-          product: "Cappuccino",
-          price: "20.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/216991470_101965968839118_7616420094217531027_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_ohc=grqzla36-HUAX_6bW32&_nc_ht=scontent.fecn7-1.fna&oh=81731d67ffdbbd2ec6a64dbef7d7fb08&oe=6125B079",
-        },
-        {
-          product: "Latte",
-          price: "21.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/216991470_101965968839118_7616420094217531027_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_ohc=grqzla36-HUAX_6bW32&_nc_ht=scontent.fecn7-1.fna&oh=81731d67ffdbbd2ec6a64dbef7d7fb08&oe=6125B079",
-        },
-        {
-          product: "Americano",
-          price: "22.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/216991470_101965968839118_7616420094217531027_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_ohc=grqzla36-HUAX_6bW32&_nc_ht=scontent.fecn7-1.fna&oh=81731d67ffdbbd2ec6a64dbef7d7fb08&oe=6125B079",
-        },
-        {
-          product: "Espresso",
-          price: "23.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/216991470_101965968839118_7616420094217531027_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_ohc=grqzla36-HUAX_6bW32&_nc_ht=scontent.fecn7-1.fna&oh=81731d67ffdbbd2ec6a64dbef7d7fb08&oe=6125B079",
-        },
-        {
-          product: "Cappuccino",
-          price: "20.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/216991470_101965968839118_7616420094217531027_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_ohc=grqzla36-HUAX_6bW32&_nc_ht=scontent.fecn7-1.fna&oh=81731d67ffdbbd2ec6a64dbef7d7fb08&oe=6125B079",
-        },
-        {
-          product: "Latte",
-          price: "21.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/216991470_101965968839118_7616420094217531027_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_ohc=grqzla36-HUAX_6bW32&_nc_ht=scontent.fecn7-1.fna&oh=81731d67ffdbbd2ec6a64dbef7d7fb08&oe=6125B079",
-        },
-        {
-          product: "Americano",
-          price: "22.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Cappuccino",
-          price: "20.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Latte",
-          price: "21.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Americano",
-          price: "22.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Espresso",
-          price: "23.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Cappuccino",
-          price: "20.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Latte",
-          price: "21.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Americano",
-          price: "22.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Americano",
-          price: "22.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Cappuccino",
-          price: "20.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Latte",
-          price: "21.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Americano",
-          price: "22.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Espresso",
-          price: "23.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Cappuccino",
-          price: "20.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Latte",
-          price: "21.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-        {
-          product: "Americano",
-          price: "22.00TL",
-          imgurl:
-            "https://scontent.fecn7-1.fna.fbcdn.net/v/t1.6435-9/217392436_101965985505783_3195504378779882822_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=UxSFPz7zc_AAX_VLWfZ&_nc_ht=scontent.fecn7-1.fna&oh=5c411a2a226aa746c15c09bd44fdfaea&oe=6123E2AA",
-        },
-      ],
+      menuCardData : null, 
     };
+  },
+  async mounted() {
+    try {
+      let response = await axios.get("http://192.168.70.125:3000/menu");
+      this.menuCardData = response.data.coffees;
+      console.log(this.menuCardData);
+    } catch (err) {
+      console.log(err);
+    }
   },
 };
 </script>
@@ -296,7 +164,7 @@ body {
 }
 
 .btn-primary {
-  border:none;
+  border: none;
   /* background-color: #1b73d8; */
 }
 .input-group {
@@ -324,48 +192,44 @@ body {
   padding-left: 3rem;
 }
 
-
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
   .input-group {
-  width: 45%;
+    width: 45%;
   }
-  
-  .kredi-btn{
+
+  .kredi-btn {
     display: none;
   }
 
-  .adres-btn{
-    display:none;
+  .adres-btn {
+    display: none;
   }
-
 }
-@media screen and (max-width: 575px){
-
-  .container-buttons{
+@media screen and (max-width: 575px) {
+  .container-buttons {
     display: flex;
   }
 
   .input-group {
     position: absolute;
-    top:0;
+    top: 0;
     width: 100%;
   }
-  
-  .kredi-btn{
+
+  .kredi-btn {
     display: none;
   }
 
-  .adres-btn{
-    display:none;
-  }
-
-  .bakiye-btn{
+  .adres-btn {
     display: none;
   }
 
-  .sepet-btn{
+  .bakiye-btn {
+    display: none;
+  }
+
+  .sepet-btn {
     display: none;
   }
 }
-
 </style>
