@@ -1,12 +1,19 @@
 <template>
   <div>
     <div class="input-group">
-      <input type="text" class="form-control" v-model="name" placeholder="Search for..." />
+      <input
+        type="text"
+        class="form-control"
+        v-model="name"
+        placeholder="Search for..."
+        id="searchInput"
+      />
       <span class="input-group-btn">
         <button
           class="btn btn-primary"
           type="button"
           v-on:click="sendSearchData()"
+          id="searchButton"
         >
           <i class="fa fa-search fa-fw"></i> Search
         </button>
@@ -16,25 +23,34 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
-    name : null,
-    data(){
-        return {
-            searchData : null,
-            name : null,
-        }
+  name: null,
+  data() {
+    return {
+      searchData: null,
+      name: null,
+    };
+  },
+  methods: {
+    sendSearchData: function () {
+      axios
+        .post("http://192.168.70.125:3000/menu/search", {
+          name: this.name,
+        })
+        .then((res) => {
+          this.$emit('search-result', res)
+        });
     },
- methods : {      
-         sendSearchData : function () {
-                axios.post("http://192.168.70.125:3000/menu/search", {
-                    name : this.name
-                }).then(
-                    res =>{
-                        console.log(res)
-                    }
-                );
+  },
+  mounted() {
+    var input = document.getElementById("searchInput");
+    input.addEventListener("keyup", function (event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("searchButton").click();
       }
-    } 
-  }
+    });
+  },
+};
 </script>

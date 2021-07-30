@@ -1,7 +1,7 @@
 <template >
   <div>
     <div class="container-buttons">
-      <searchBar/>
+      <searchBar @search-result="searchFunction" />
       <div class="button-group">
         <div>
           <button type="button" class="btn btn-primary kredi-btn">
@@ -93,30 +93,29 @@
     </div>
     <div class="container-fluid menu-box">
       <div class="row">
-         <menuCard
+        <menuCard
           v-for="(card, index) in menuCardData"
           :key="index"
           :name="card.name"
           :price="card.price"
           :img-src="card.url"
         />
-
       </div>
     </div>
   </div>
 </template>
 <script>
-import axios from 'axios'
+import axios from "axios";
 import menuCard from "../components/menuCard.vue";
-import searchBar from "../components/searchBar.vue"
+import searchBar from "../components/searchBar.vue";
 export default {
   components: {
     menuCard,
-    searchBar
+    searchBar,
   },
   data() {
     return {
-      menuCardData : null, 
+      menuCardData: null,
     };
   },
   async mounted() {
@@ -126,6 +125,24 @@ export default {
     } catch (err) {
       console.log(err);
     }
+  },
+  methods: {
+    searchFunction(value) {
+      let data = value.data.filterByName;
+      for (let i = 0; i < data.length; i++) {
+        const currentArray = data[i];
+        const currentArrayName = currentArray.name;
+        for(let x = 0; x < this.menuCardData.length;x++){ // change these with vbinds from menuCard component
+          const currentArrayCards = this.menuCardData[x];
+          const currentArrayCardsName = currentArrayCards.name;
+          if(currentArrayName === currentArrayCardsName){
+            //here
+          }
+        }
+
+      }
+      //console.log(coffeeToDisplay)
+    },
   },
 };
 </script>
