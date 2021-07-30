@@ -16,7 +16,7 @@
     "request": "^2.79.0",
     "serve": "^12.0.0",
     "vue": "^2.6.11",
-    "vue-router": "^3.5.2",
+    "vue-router": "^3.2.0",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

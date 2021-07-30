@@ -166,10 +166,7 @@ export default {
         password: this.password,
       }).then(res => {
         console.log(res.data)
-        localStorage.setItem('tokenSignIn',res.data.signInToken);
-        if (localStorage.tokenSignIn) {
-      this.$router.push({ path: "/menu"});
-    }
+        localStorage.setItem('tokenSignIn',res.data.signInToken)
       })
     }
   },
