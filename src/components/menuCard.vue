@@ -2,14 +2,14 @@
   <div class="coffe-cards col-lg-2 col-sm-6 col-12">
     <b-card
       h-100
-      :img-src=" imgSrc"
+      :img-src="imgSrc"
       img-alt="Image"
       img-top
       style="max-width: 15rem"
       class="mb-2 kart"
     >
       <b-card-title>
-        <h2>{{ title }}</h2>
+        <h2>{{ name }}</h2>
       </b-card-title>
 
       <b-card-text>
@@ -31,9 +31,8 @@ export default {
   
   name: "menuCard",
   props: {
-    title: String,
+    name: String,
     price: String,
-    product: String,
     imgSrc:String,
   },
   methods: {

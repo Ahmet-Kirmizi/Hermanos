@@ -1,14 +1,7 @@
 <template >
   <div>
     <div class="container-buttons">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for..." />
-        <span class="input-group-btn">
-          <button class="btn btn-primary" type="button">
-            <i class="fa fa-search fa-fw"></i> Search
-          </button>
-        </span>
-      </div>
+      <searchBar/>
       <div class="button-group">
         <div>
           <button type="button" class="btn btn-primary kredi-btn">
@@ -103,7 +96,7 @@
          <menuCard
           v-for="(card, index) in menuCardData"
           :key="index"
-          :title="card.name"
+          :name="card.name"
           :price="card.price"
           :img-src="card.url"
         />
@@ -115,9 +108,11 @@
 <script>
 import axios from 'axios'
 import menuCard from "../components/menuCard.vue";
+import searchBar from "../components/searchBar.vue"
 export default {
   components: {
     menuCard,
+    searchBar
   },
   data() {
     return {
@@ -128,7 +123,6 @@ export default {
     try {
       let response = await axios.get("http://192.168.70.125:3000/menu");
       this.menuCardData = response.data.coffees;
-      console.log(this.menuCardData);
     } catch (err) {
       console.log(err);
     }
