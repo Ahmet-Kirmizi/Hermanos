@@ -2,13 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '../store'
 
-import Login from '../components/Login'
-import Dashboard from '../components/Dashboard'
-import Movies from '../components/Movies'
+import login from '../components/login.vue'
+import menu from '../components/menuCard.vue'
 
 import guest from './middleware/guest'
 import auth from './middleware/auth'
-import isSubscribed from './middleware/isSubscribed'
+import middlewarePipeline from './middlewarePipeline'
 
 
 Vue.use(Router)
@@ -19,7 +18,7 @@ const router = new Router({
     routes: [{
             path: '/login',
             name: 'login',
-            component: Login,
+            component: login,
             meta: {
                 middleware: [
                     guest
@@ -28,9 +27,9 @@ const router = new Router({
         },
 
         {
-            path: '/dashboard',
-            name: 'dashboard',
-            component: Dashboard,
+            path: '/menu',
+            name: 'menu',
+            component: menu,
             meta: {
                 middleware: [
                     auth
@@ -39,11 +38,6 @@ const router = new Router({
         }
     ]
 })
-
-
-export default router
-
-const router = new Router({ ...})
 
 router.beforeEach((to, from, next) => {
     if (!to.meta.middleware) {
@@ -57,7 +51,13 @@ router.beforeEach((to, from, next) => {
         next,
         store
     }
+
+
     return middleware[0]({
-        ...context
+        ...context,
+        next: middlewarePipeline(context, middleware, 1)
     })
+
 })
+
+export default router
