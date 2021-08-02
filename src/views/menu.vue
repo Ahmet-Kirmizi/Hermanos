@@ -1,7 +1,7 @@
-<template >
+<template>
   <div>
     <div class="container-buttons">
-      <searchBar @search-result="searchFunction" />
+      <searchBar @search="getResults" @search-result="searchFunction" />
       <div class="button-group">
         <div>
           <button type="button" class="btn btn-primary kredi-btn">
@@ -96,9 +96,9 @@
         <menuCard
           v-for="(card, index) in menuCardData"
           :key="index"
-          :name="card.name"
-          :price="card.price"
-          :img-src="card.url"
+          :name="getCompValue(card.name)"
+          :price="getCompValue(card.price)"
+          :img-src="getCompValue(card.url)"
         />
       </div>
     </div>
@@ -108,6 +108,9 @@
 import axios from "axios";
 import menuCard from "../components/menuCard.vue";
 import searchBar from "../components/searchBar.vue";
+let componentData;
+let compared;
+let arrayOfNames;
 export default {
   components: {
     menuCard,
@@ -116,32 +119,40 @@ export default {
   data() {
     return {
       menuCardData: null,
+      queryData : null
     };
   },
-  async mounted() {
-    try {
-      let response = await axios.get("http://192.168.70.125:3000/menu");
+  mounted() {
+    this.getResults()
+  },
+  methods: {
+    async getResults(value) {
+       try {
+      let response = await axios.get("http://192.168.70.125:3000/menu?name=" + value);
       this.menuCardData = response.data.coffees;
+      this.queryData = response.data.filteredQuery;
+      console.log(this.queryData)
+
     } catch (err) {
       console.log(err);
     }
-  },
-  methods: {
+    },
     searchFunction(value) {
       let data = value.data.filterByName;
       for (let i = 0; i < data.length; i++) {
         const currentArray = data[i];
         const currentArrayName = currentArray.name;
-        for(let x = 0; x < this.menuCardData.length;x++){ // change these with vbinds from menuCard component
-          const currentArrayCards = this.menuCardData[x];
-          const currentArrayCardsName = currentArrayCards.name;
-          if(currentArrayName === currentArrayCardsName){
-            //here
+        for (const data of componentData) {
+          if (currentArrayName.includes(data)) {
+            arrayOfNames = currentArrayName;
+            compared = true;
           }
         }
-
       }
-      //console.log(coffeeToDisplay)
+    },
+    getCompValue: function (prop) {
+      componentData = prop;
+      return prop;
     },
   },
 };

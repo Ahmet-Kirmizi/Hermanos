@@ -1,12 +1,13 @@
 <template>
   <div>
     <div class="input-group">
-      <input
+      <b-form-input
         type="text"
         class="form-control"
         v-model="name"
         placeholder="Search for..."
         id="searchInput"
+        debounce="300"
       />
       <span class="input-group-btn">
         <button
@@ -31,6 +32,11 @@ export default {
       searchData: null,
       name: null,
     };
+  },
+  watch: {
+    name() {
+      this.$emit('search', this.name)
+    },
   },
   methods: {
     sendSearchData: function () {
