@@ -92,13 +92,14 @@
       </div>
     </div>
     <div class="container-fluid menu-box">
-      <div class="row">
+      <div class="row" >
         <menuCard
           v-for="(card, index) in menuCardData"
           :key="index"
           :name="getCompValue(card.name)"
           :price="getCompValue(card.price)"
           :img-src="getCompValue(card.url)"
+          @update='$emit("update : getCompValue(card.name)", $event.target.name, "update : getCompValue(card.price)", $event.target.price,"update : getCompValue(card.url)", $event.target.img-src)'
         />
       </div>
     </div>
@@ -111,31 +112,44 @@ import searchBar from "../components/searchBar.vue";
 let componentData;
 let compared;
 let arrayOfNames;
+let empty = [];
 export default {
   components: {
     menuCard,
     searchBar,
   },
+
   data() {
     return {
       menuCardData: null,
-      queryData : null
+      queryData: null,
+      data: null,
     };
   },
   mounted() {
-    this.getResults()
+    this.getResults();
+    this.getCompValue();
   },
   methods: {
+    getCompValue: function (prop) {
+      componentData = prop;
+      this.data = prop;
+      return prop;
+    },
     async getResults(value) {
-       try {
-      let response = await axios.get("http://192.168.70.125:3000/menu?name=" + value);
-      this.menuCardData = response.data.coffees;
-      this.queryData = response.data.filteredQuery;
-      console.log(this.queryData)
-
-    } catch (err) {
-      console.log(err);
-    }
+      try {
+        let response = await axios.get(
+          "http://192.168.70.125:3000/menu?name=" + value
+        );
+        this.menuCardData = response.data.coffees;
+        this.queryData = response.data.filteredQuery;
+        this.menuCardData = this.queryData
+        console.log(this.queryData.__ob__.value[0].name);
+        
+        componentData = this.queryData;
+      } catch (err) {
+        console.log(err);
+      }
     },
     searchFunction(value) {
       let data = value.data.filterByName;
@@ -149,10 +163,6 @@ export default {
           }
         }
       }
-    },
-    getCompValue: function (prop) {
-      componentData = prop;
-      return prop;
     },
   },
 };

@@ -16,7 +16,7 @@
        <h3>{{ price }}</h3>
       </b-card-text>
 
-      <b-button href="#" variant="primary" v-on:click="register(title, price)"
+      <b-button href="#" variant="primary" v-on:click="register(name, price)"
         >Sepete Ekle</b-button
       >
     </b-card>
