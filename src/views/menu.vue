@@ -127,7 +127,7 @@ export default {
     };
   },
   mounted() {
-    this.getResults();
+    this.getValues();
     this.getCompValue();
   },
   methods: {
@@ -141,7 +141,6 @@ export default {
         let response = await axios.get(
           "http://192.168.70.125:3000/menu?name=" + value
         );
-        this.menuCardData = response.data.coffees;
         this.queryData = response.data.filteredQuery;
         this.menuCardData = this.queryData
         console.log(this.queryData.__ob__.value[0].name);
@@ -149,6 +148,14 @@ export default {
         componentData = this.queryData;
       } catch (err) {
         console.log(err);
+      }
+      
+    },async getValues(){
+      try{
+        let res = await axios.get("http://192.168.70.125:3000/menu")
+        this.menuCardData = res.data.coffees;
+      }catch(err){
+        cosnole.log(err)
       }
     },
     searchFunction(value) {

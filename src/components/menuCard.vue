@@ -1,5 +1,5 @@
 <template >
-  <div class="coffe-cards col-lg-2 col-sm-6 col-12">
+  <div class="coffe-cards col-lg-6  col-md-6 col-sm-7 col-12">
     <b-card
       h-100
       :img-src="imgSrc"
@@ -51,7 +51,7 @@ export default {
 }
 
 .coffe-cards{
-  padding:1rem;
+  padding: 1rem;
 }
 
 h3{
