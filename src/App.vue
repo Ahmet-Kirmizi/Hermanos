@@ -11,7 +11,9 @@ import axios from "axios"
 import textUnderline from "../src/components/textUnderline.vue";
 import backgroundImg from "../src/components/backgroundImg.vue";
 import navbarTop from "../src/components/navbarTop.vue";
+
 export default {
+  name: 'App',
   data() {
     return {
       info : null

@@ -7,6 +7,7 @@ import sepet from '../views/sepet.vue'
 import cuzdan from '../views/cuzdan.vue'
 import hesap from '../views/hesap.vue'
 import login from '../views/login.vue'
+import edit from '../views/edit.vue'
 
 
 
@@ -44,7 +45,11 @@ const routes = [
     name: 'login',
     component: login
   },
-  
+  {
+    path : '/edit',
+    name : 'edit',
+    component : edit 
+  },
 ]
 
 const router = new VueRouter({

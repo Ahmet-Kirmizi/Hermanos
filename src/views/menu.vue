@@ -155,7 +155,7 @@ export default {
         let res = await axios.get("http://192.168.70.125:3000/menu")
         this.menuCardData = res.data.coffees;
       }catch(err){
-        cosnole.log(err)
+        console.log(err)
       }
     },
     searchFunction(value) {

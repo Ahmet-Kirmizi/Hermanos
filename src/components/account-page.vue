@@ -50,7 +50,6 @@ div.container{
   width: 50vw;
   height: 40vh;
   flex: 0 1 50%;
-  background-image: url(../assets/images/account-img.jpg);
   background-size: 100% 43vh;
   background-repeat: no-repeat;
 }
@@ -72,7 +71,6 @@ div.container{
   color: rgb(0, 0, 0);
   width: 50%;
   height: 40vh;
-  background-image: url(../assets/images/location-img.jpg);
   background-size: 100% 43vh;
   background-repeat: no-repeat;
 }
@@ -94,7 +92,6 @@ div.container{
   color: rgb(0, 0, 0);
   width: 50%;
   height: 40vh;
-  background-image: url(../assets/images/creditcard-img.jpg);
   background-size: 100% 43vh;
   background-repeat: no-repeat;
 }
@@ -117,7 +114,6 @@ div.container{
   color: rgb(0, 0, 0);
   width: 50%;
   height: 40vh;
-  background-image: url(../assets/images/orders-img.jpg);
   background-size: 100% 43vh;
   background-repeat: no-repeat;
   z-index: -1;

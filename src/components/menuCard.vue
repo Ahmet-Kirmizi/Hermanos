@@ -1,5 +1,5 @@
 <template >
-  <div class="coffe-cards col-lg-6  col-md-6 col-sm-7 col-12">
+  <div class="coffe-cards col-lg-6  col-md-6 col-sm-7 col-6">
     <b-card
       h-100
       :img-src="imgSrc"
@@ -16,7 +16,7 @@
        <h3>{{ price }}</h3>
       </b-card-text>
 
-      <b-button href="#" variant="primary" v-on:click="register(name, price)"
+      <b-button href="#" variant="primary" v-on:click="register_push(name, price)"
         >Sepete Ekle</b-button
       >
     </b-card>
@@ -36,7 +36,8 @@ export default {
     imgSrc:String,
   },
   methods: {
-    register: function (productname, price) {
+    register_push: function (productname, price) {
+      this.$router.push({ path: "/edit" })
       console.log(productname, price);
     },
   },
