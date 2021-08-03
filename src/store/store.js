@@ -5,14 +5,21 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
     state: {
-        product: ''
+        size: '',
+        sugar : '',
+        sauces : '', 
       },
       mutations: {
-        change(state, product) {
-          state.product = product
+        change(state, size, sugar, sauces) {
+          state.size = size
+          state.sugar = sugar
+          state.sauces = sauces
         }
       },
       getters: {
-        product: state => state.product
+        size: state => state.size,
+        sugar: state => state.sugar,
+        sauces: state => state.sauces
+
       }
 })

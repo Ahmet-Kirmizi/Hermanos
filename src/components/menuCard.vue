@@ -25,7 +25,6 @@
 
 
 <script>
-const API_GETCARDDATA = "http://192.168.70.125:3000/menu"
 
 export default {
   
