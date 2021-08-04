@@ -145,7 +145,7 @@ export default {
     },
     async getResults(value) {
       try {
-        let response = await axios.$get(
+        let response = await axios.get(
           "http://192.168.70.125:3000/menu?name=" + value
         );
         this.queryData = response.data.filteredQuery;
