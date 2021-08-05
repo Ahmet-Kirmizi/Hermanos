@@ -1,5 +1,5 @@
 <template >
-  <div class="coffe-cards col-lg-6  col-md-6 col-sm-7 col-6">
+  <div class="coffe-cards col-lg-2  col-md-6 col-sm-7 col-12">
     <b-card
       h-100
       :img-src="imgSrc"

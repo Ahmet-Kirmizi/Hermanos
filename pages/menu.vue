@@ -145,11 +145,12 @@ export default {
     },
     async getResults(value) {
       try {
-        let response = await axios.get(
-          "http://192.168.70.125:3000/menu?name=" + value
+        let response = await this.$axios.get(
+          "/menu?name=" + value
         );
         this.queryData = response.data.filteredQuery;
         this.menuCardData = this.queryData
+        console.log(process.env.BASE_URL)
         console.log(this.queryData.__ob__.value[0].name);
         
         componentData = this.queryData;
@@ -159,7 +160,7 @@ export default {
       
     },async getValues(){
       try{
-        let res = await axios.get("http://192.168.70.125:3000/menu")
+        let res = await this.$axios.get("/menu")
         this.menuCardData = res.data.coffees;
       }catch(err){
         console.log(err)

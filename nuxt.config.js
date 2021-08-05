@@ -1,5 +1,4 @@
 export default {
-  BASE_URL: process.env.BASE_URL,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Hermanos Cafe',
@@ -20,6 +19,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+   '~/plugins/axios.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -36,6 +36,7 @@ export default {
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
+      
       // https://go.nuxtjs.dev/axios
       '@nuxtjs/axios',
       ['bootstrap-vue/nuxt'],
@@ -50,7 +51,7 @@ export default {
     },
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
     axios: {
-      baseUrl: process.env.BASE_URLk
+      baseUrl : process.env.BASE_URL
     },
 
     // PWA module configuration: https://go.nuxtjs.dev/pwa
