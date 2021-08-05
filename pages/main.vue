@@ -1,5 +1,6 @@
 <template >
   <div>
+    <navbar-top/>
     <img
       class="main-logo"
       src="@/assets/images/logo.png"

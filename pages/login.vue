@@ -2,6 +2,7 @@
   <div>
     <div>
       <backgroundImg/>
+      <nav-bar-top/>
       <loginForm/>
     </div>
   </div>
@@ -10,10 +11,12 @@
 import axios from 'axios';
 import loginForm from "../components/login.vue";
 import backgroundImg from '../components/backgroundImg.vue'
+import navBarTop from '../components/navbarTop.vue'
 export default {
   components: {
     loginForm,
-    backgroundImg
+    backgroundImg,
+    navBarTop
   },
   }
 </script>

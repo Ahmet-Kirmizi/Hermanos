@@ -157,10 +157,14 @@ export default {
         address: this.address,
       }).then(res => {
         console.log(res.data)
-        localStorage.setItem('token',res.data.token)
+        localStorage.setItem('token',res.data.token);
+        if(localStorage.token){
+          this.$router.push('/menu')
+        }
         });
     },
     sendSignInData: function (){
+      console.log("works")
       axios.post("http://192.168.70.125:3000/signIn", {
         email: this.email,
         password: this.password,
@@ -168,7 +172,9 @@ export default {
         console.log(res.data)
         localStorage.setItem('tokenSignIn',res.data.signInToken);
         if (localStorage.tokenSignIn) {
-      this.$router.push({ path: "/menu"});
+      this.$router.push('/menu');
+    }else{
+      console.log("nah")
     }
       })
     }

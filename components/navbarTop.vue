@@ -2,7 +2,8 @@
   <div id="navBar">
     <b-navbar toggleable="lg" variant="info">
       <b-navbar-brand class="navigation-main" style="font-size: 3rem">
-        <router-link to="index">Hermanos</router-link>
+          <NuxtLink to="/main">Hermanos</NuxtLink>
+
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse" class="navbar navbar-expand-lg">
       </b-navbar-toggle>
@@ -10,16 +11,16 @@
       <b-collapse id="nav-collapse" is-nav class="text-center">
         <b-navbar-nav class="ml-auto">
           <b-nav-item class="navigationlinks"
-            ><router-link to="/menu">Menü</router-link></b-nav-item
+            ><NuxtLink to="/menu">Menü</NuxtLink></b-nav-item
           >
           <b-nav-item class="navigationlinks"
-            ><router-link to="/sepet">Sepet</router-link></b-nav-item
+            ><NuxtLink to="/sepet">Sepet</NuxtLink></b-nav-item
           >
           <b-nav-item class="navigationlinks"
-            ><router-link to="/cuzdan">Cüzdan</router-link></b-nav-item
+            ><NuxtLink to="/cuzdan">Cüzdan</NuxtLink></b-nav-item
           >
           <b-nav-item class="navigationlinks"
-            ><router-link to="/hesap">Hesap</router-link></b-nav-item
+            ><NuxtLink to="/hesap">Hesap</NuxtLink></b-nav-item
           >
         </b-navbar-nav>
 
