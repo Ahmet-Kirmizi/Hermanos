@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!--
     <div class="container">
       <div class="account-container d-flex">
         <div class="account-information account-box img-b-overlay">
@@ -23,6 +24,7 @@
         </div>
       </div>
     </div>
+    -->
   </div>
 </template>
 <script>
@@ -32,12 +34,12 @@ export default {
 </script>
 
 <style scoped>
-
+/*
 div.container{
   padding-right: 16px;
     padding-left: 16px;
     padding-top: 24px;
-    padding-bottom: 0px;  
+    padding-bottom: 0px;
 }
 
 .account-container {
@@ -116,7 +118,7 @@ div.container{
   height: 40vh;
   background-size: 100% 43vh;
   background-repeat: no-repeat;
-  z-index: -1;
+
 }
 
 .orders-information h2 {
@@ -138,5 +140,6 @@ div.container{
   background-size: 100% 43vh;
   background-color: black;
   z-index: 999;
-}
+}*/
+
 </style>

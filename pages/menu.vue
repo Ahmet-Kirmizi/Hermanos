@@ -75,6 +75,7 @@
           </button>
         </div>
         <div>
+
           <button type="button" class="btn btn-success sepet-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -105,6 +106,9 @@
         />
       </div>
     </div>
+    <div class="footer-main">
+      <footerPage/>
+    </div>
   </div>
 </template>
 <script>
@@ -113,6 +117,7 @@ import searchBar from "../components/searchBar.vue";
 import menuCard from "@/components/menuCard.vue"
 import backgroundImg from '../components/backgroundImg.vue'
 import navBarTop from '../components/navbarTop.vue'
+import footerPage from '../components/footer.vue'
 
 let componentData;
 let compared;
@@ -123,7 +128,7 @@ export default {
     menuCard,
     searchBar,
     backgroundImg,
-    navBarTop
+    navBarTop, footerPage
   },
 
   data() {
@@ -152,12 +157,12 @@ export default {
         this.menuCardData = this.queryData
         console.log(process.env.BASE_URL)
         console.log(this.queryData.__ob__.value[0].name);
-        
+
         componentData = this.queryData;
       } catch (err) {
         console.log(err);
       }
-      
+
     },async getValues(){
       try{
         let res = await this.$axios.get("/menu")
@@ -188,17 +193,14 @@ export default {
   display: flex;
   position: absolute;
   width: 90%;
-  height: 75%;
+  height: 50%;
   background-color: #9e5e3b69;
-  top: 25%;
+  top: 30%;
   right: 5%;
   padding: 50px;
-  z-index: -1;
+
 }
 
-body {
-  overflow: hidden;
-}
 
 .menu-box {
   overflow: scroll;
@@ -225,7 +227,7 @@ body {
   right: 5%;
   bottom: 77%;
   height: 5%;
-  z-index: -1;
+
   display: flex;
 }
 
@@ -238,7 +240,14 @@ body {
 .container-buttons .button-group div {
   padding-left: 3rem;
 }
+.footer-main{
+  position: fixed;
+  bottom : 10%;
+  right: 5%;
+  padding: 50px;
+  z-index: -1;
 
+}
 @media screen and (max-width: 1200px) {
   .input-group {
     width: 45%;

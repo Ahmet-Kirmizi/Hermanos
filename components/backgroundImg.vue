@@ -1,5 +1,6 @@
 <template>
     <div>
+      <img src="../assets/images/bg-image4.jpg" alt="" class="backgroundImg">
     </div>
 </template>
 <script>
@@ -9,8 +10,11 @@ export default {
 };
 </script>
 
-<style>
-    body{
-        background-image: url(../assets/images/bg-image4.jpg);
+<style scoped>
+    .backgroundImg{
+        position: fixed;
+        width : 100%;
+        height : 100%;
+  
     }
 </style>
