@@ -303,14 +303,12 @@ div.container button {
   margin: 0 auto 0 auto;
   display: none;
 
-  overflow: hidden;
   color: rgb(0, 0, 0);
   font-weight: 800;
 }
 
 @media only screen and (min-width: 420px) {
   div.container {
-    overflow: hidden;
     width: 640px;
   }
 }

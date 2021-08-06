@@ -105,9 +105,9 @@
           @update='$emit("update : getCompValue(card.name)", $event.target.name, "update : getCompValue(card.price)", $event.target.price,"update : getCompValue(card.url)", $event.target.img-src)'
         />
       </div>
-      <div class="footer-main">
-        <footerPage/>
-      </div>
+    </div>
+    <div class="footer-main">
+      <footerPage/>
     </div>
   </div>
 </template>
@@ -198,7 +198,7 @@ export default {
   top: 30%;
   right: 5%;
   padding: 50px;
-  z-index: -1;
+
 }
 
 
@@ -227,7 +227,7 @@ export default {
   right: 5%;
   bottom: 77%;
   height: 5%;
-  z-index: -1;
+
   display: flex;
 }
 

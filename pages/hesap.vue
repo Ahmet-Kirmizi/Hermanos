@@ -1,11 +1,10 @@
 <template>
   <div>
-    <div>
+<background-img />
       <nav-bar-top />
       <accountPage />
 
-      <background-img />
-    </div>
+      
   </div>
 </template>
 <script>

@@ -2,8 +2,8 @@
 <div>
   <nav-bar-top/>
   <div class="container-fluid edit-box">
-    <p class="titleText">{{ }}</p>
-    <p class="editDescription">{{ description }}</p>
+    <p class="titleText"></p>
+    <p class="editDescription"></p>
 
     <!--<button v-on:click="change">Sugar</button>-->
   </div>
@@ -19,15 +19,10 @@ export default {
     this.getCardData()
   },
   props: {
-    cardDataName: String,
-    description: String,
-    size: String,
-    sugar: String,
-    sauces: String,
   },
   components: {
     navBarTop,
-    
+
   },
   methods: {
     changed: function (event) {

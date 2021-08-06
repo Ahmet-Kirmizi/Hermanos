@@ -1,5 +1,6 @@
 <template >
   <div>
+    <background-img/>
     <navbar-top/>
     <img
       class="main-logo"
@@ -52,10 +53,12 @@
 <script>
 import navbarTop from "../components/navbarTop.vue";
 import loginForm from "../components/login.vue"
+import backgroundImg from '../components/backgroundImg.vue'
 export default {
   components: {
     navbarTop,
     loginForm,
+    backgroundImg
   },
 };
 </script>
@@ -71,7 +74,6 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -1;
 }
 
 .social-icons svg{
@@ -88,7 +90,6 @@ export default {
   top: 50%;
   left: 95%;
   transform: translate(-50%, -50%);
-  z-index: -1;
 }
 
 @media screen and (max-width:990px) {
