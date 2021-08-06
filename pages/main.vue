@@ -2,11 +2,7 @@
   <div>
     <background-img/>
     <navbar-top/>
-    <img
-      class="main-logo"
-      src="@/assets/images/logo.png"
-      alt="Hermanos Coffe"
-    />
+
     <div class="social-icons">
     <svg
       xmlns="http://www.w3.org/2000/svg"
