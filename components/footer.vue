@@ -10,20 +10,16 @@
 
 <script>
 export default {
-  name : "footerPage"
+  name : "footer"
 }
 </script>
 
-<style lang="css" scoped>
+<style scoped>
 .footerMain{
-  position: fixed;
-  display : flex;
   background-color : #FFFF;
-  width : 100%;
-  height : 20%;
-  left : 50%;
-  bottom: 0px;
-  align-items : center;
-
+  width: 100%;
+  height: auto;
+  display: flex;
+  z-index: 999;
 }
 </style>

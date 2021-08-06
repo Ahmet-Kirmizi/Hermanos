@@ -2,8 +2,7 @@
   <div id="navBar">
     <b-navbar toggleable="lg" variant="info">
       <b-navbar-brand class="navigation-main" style="font-size: 3rem">
-          <NuxtLink to="/main" class="Hermanos">Hermanos</NuxtLink>
-
+        <NuxtLink to="/main" class="Hermanos">HERMANOS</NuxtLink>
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse" class="navbar navbar-expand-lg">
       </b-navbar-toggle>
@@ -23,20 +22,19 @@
             ><NuxtLink to="/hesap">Hesap</NuxtLink></b-nav-item
           >
         </b-navbar-nav>
-
       </b-collapse>
     </b-navbar>
-    </div>
+  </div>
 </template>
 <script>
 export default {
-  name: "navbarTop",
+  name: 'navbarTop',
   components: {},
-  };
+}
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 .navbar-toggler {
   background-color: white;
@@ -50,14 +48,18 @@ export default {
 .bg-info {
   background-color: transparent !important;
 }
-
+.navbar{
+  border-bottom: 1px solid #191412;
+}
 .Hermanos {
+  font-size: 2.7rem;
   color: #191412 !important;
   font-family: 'PT Sans Narrow', sans-serif;
 }
-a{
-font-family: 'PT Sans Narrow', sans-serif;
-font-size : 2rem;
+a {
+  color: #191412 !important;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2.3rem;
 }
 .navigationlinks {
   font-size: 2.5rem;
@@ -80,7 +82,7 @@ font-size : 2rem;
   width: 0;
   height: 3px;
   transition: all 0.5s;
-  content: "";
+  content: '';
 }
 
 .navigationlinks:hover::after {
@@ -102,8 +104,6 @@ a:hover {
   color: burlywood;
 }
 
-
-
 @media screen and (max-width: 990px) {
   .navigationlinks::after {
     background: none;
@@ -118,8 +118,6 @@ a:hover {
     height: 80vh;
   }
 }
-
-
 </style>
 
 
