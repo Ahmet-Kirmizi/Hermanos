@@ -2,7 +2,7 @@
   <div id="navBar">
     <b-navbar toggleable="lg" variant="info">
       <b-navbar-brand class="navigation-main" style="font-size: 3rem">
-          <NuxtLink to="/main">Hermanos</NuxtLink>
+          <NuxtLink to="/main" class="Hermanos">Hermanos</NuxtLink>
 
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse" class="navbar navbar-expand-lg">
@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 .navbar-toggler {
   background-color: white;
 }
@@ -51,11 +51,14 @@ export default {
   background-color: transparent !important;
 }
 
-a {
-  color: white;
-  font-family: "Lobster", cursive;
+.Hermanos {
+  color: #191412 !important;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
-
+a{
+font-family: 'PT Sans Narrow', sans-serif;
+font-size : 2rem;
+}
 .navigationlinks {
   font-size: 2.5rem;
   padding-right: 3rem;

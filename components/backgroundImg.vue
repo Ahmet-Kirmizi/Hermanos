@@ -1,6 +1,6 @@
 <template>
     <div>
-      <img src="../assets/images/coffe-new.jpg" alt="" class="backgroundImg">
+      <div class="pageBackground"></div>
     </div>
 </template>
 <script>
@@ -11,9 +11,11 @@ export default {
 </script>
 
 <style scoped>
-    .backgroundImg{
-        position: fixed;
-
+    .pageBackground{
+      position: fixed;
+        background-color: #A5C3C3;
+        width: 100vw;
+        height: 100vh;
   
     }
 </style>
