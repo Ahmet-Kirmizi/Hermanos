@@ -43,7 +43,7 @@
     </div>
     <img src="../assets/images/coffee-pic.png" class="coffee-pic" />
     <div class="mainPageText"><p>Quality coffee from bean to the cup</p></div>
-    <div class="footerDiv"><footer/></div>
+    <div class="footerDiv"><footer-hermanos/></div>
     
   </div>
 </template>
@@ -51,13 +51,13 @@
 import navbarTop from '../components/navbarTop.vue'
 import loginForm from '../components/login.vue'
 import backgroundImg from '../components/backgroundImg.vue'
-import footer from '../components/footer.vue'
+import footerHermanos from '../components/footer.vue'
 export default {
   components: {
     navbarTop,
     loginForm,
     backgroundImg,
-    footer
+    footerHermanos
   },
 }
 </script>
@@ -75,7 +75,7 @@ body{
 .footerDiv{
   position: fixed;
   width: 100%;
-  height: 20%;
+  height: auto;
   bottom: 0;
 }
 .mainPageText {

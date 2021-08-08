@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name : "footer"
+  name : "footerMain"
 }
 </script>
 
@@ -18,8 +18,8 @@ export default {
 .footerMain{
   background-color : #FFFF;
   width: 100%;
-  height: auto;
-  display: flex;
-  z-index: 999;
+  
+
+
 }
 </style>

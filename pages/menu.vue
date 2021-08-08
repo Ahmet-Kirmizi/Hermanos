@@ -102,7 +102,6 @@
           :name="getCompValue(card.name)"
           :price="getCompValue(card.price)"
           :img-src="getCompValue(card.url)"
-          @update='$emit("update : getCompValue(card.name)", $event.target.name, "update : getCompValue(card.price)", $event.target.price,"update : getCompValue(card.url)", $event.target.img-src)'
         />
       </div>
     </div>
