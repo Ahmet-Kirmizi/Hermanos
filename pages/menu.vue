@@ -188,6 +188,9 @@ export default {
 </script>
 
 <style scoped>
+body{
+  overflow-y: scroll;
+}
 .menu-box {
   display: flex;
   position: absolute;
@@ -240,10 +243,9 @@ export default {
   padding-left: 3rem;
 }
 .footer-main{
-  position: fixed;
-  bottom : 10%;
-  right: 5%;
-  padding: 50px;
+  position: absolute;
+  bottom : -300px;
+  right: 30%;
   z-index: -1;
 
 }
