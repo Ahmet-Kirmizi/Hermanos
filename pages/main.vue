@@ -41,10 +41,7 @@
         />
       </svg>
     </div>
-    <img src="../assets/images/coffee-pic.png" class="coffee-pic" />
-    <div class="mainPageText"><p>Quality coffee from bean to the cup</p></div>
-    <div class="footerDiv"><footer-hermanos/></div>
-    
+
   </div>
 </template>
 <script>
@@ -57,14 +54,14 @@ export default {
     navbarTop,
     loginForm,
     backgroundImg,
-    footerHermanos
+    footerHermanos,
   },
 }
 </script>
 
 <style >
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Serif:wght@700&display=swap');
-body{
+body {
   overflow-y: scroll;
 }
 ::-webkit-scrollbar {
@@ -72,26 +69,32 @@ body{
   visibility: hidden;
   opacity: 0;
 }
-.footerDiv{
-  position: fixed;
+.footerDiv {
+  margin-top: 300px;
+  position: absolute;
   width: 100%;
   height: auto;
   bottom: 0;
 }
-.mainPageText {
-  vertical-align: middle;
+.mainPageTextBox {
+  opacity: 0.5;
+  background-color: black;
   border-style: none;
   position: absolute;
-  width: auto;
+  width: 70%;
   height: auto;
   top: 50%;
-  left: 60%;
+  left: 50%;
   transform: translate(-50%, -50%);
+}
+.mainPageText {
+  color: #ffff;
+  vertical-align: middle;
 }
 .mainPageText p {
   font-family: 'PT Sans Narrow', sans-serif;
   font-family: 'PT Serif', serif;
-  color: #191412 !important;
+  color: #fff !important;
   font-size: 4rem;
 }
 .coffee-pic {

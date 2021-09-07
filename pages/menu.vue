@@ -1,7 +1,7 @@
 <template>
   <div>
-    <background-img/>
-    <nav-bar-top/>
+    <background-img />
+    <nav-bar-top />
     <div class="container-buttons">
       <searchBar @search="getResults" @search-result="searchFunction" />
       <div class="button-group">
@@ -75,7 +75,6 @@
           </button>
         </div>
         <div>
-
           <button type="button" class="btn btn-success sepet-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +94,7 @@
       </div>
     </div>
     <div class="container-fluid menu-box">
-      <div class="row" >
+      <div class="row">
         <menuCard
           v-for="(card, index) in menuCardData"
           :key="index"
@@ -106,28 +105,29 @@
       </div>
     </div>
     <div class="footer-main">
-      <footerPage/>
+      <footerPage />
     </div>
   </div>
 </template>
 <script>
-import axios from "axios";
-import searchBar from "../components/searchBar.vue";
-import menuCard from "@/components/menuCard.vue"
+import axios from 'axios'
+import searchBar from '../components/searchBar.vue'
+import menuCard from '@/components/menuCard.vue'
 import backgroundImg from '../components/backgroundImg.vue'
 import navBarTop from '../components/navbarTop.vue'
 import footerPage from '../components/footer.vue'
 
-let componentData;
-let compared;
-let arrayOfNames;
-let empty = [];
+let componentData
+let compared
+let arrayOfNames
+let empty = []
 export default {
   components: {
     menuCard,
     searchBar,
     backgroundImg,
-    navBarTop, footerPage
+    navBarTop,
+    footerPage,
   },
 
   data() {
@@ -135,60 +135,65 @@ export default {
       menuCardData: null,
       queryData: null,
       data: null,
-    };
+    }
+  },
+  computed: {
+    products() {
+      return this.$store.state.products
+    },
+
   },
   mounted() {
-    this.getValues();
-    this.getCompValue();
+    this.$store.dispatch('getProducts')
+    this.getValues()
+    this.getCompValue()
   },
   methods: {
     getCompValue: function (prop) {
-      componentData = prop;
-      this.data = prop;
-      return prop;
+      componentData = prop
+      this.data = prop
+      return prop
     },
     async getResults(value) {
       try {
-        let response = await this.$axios.get(
-          "/menu?name=" + value
-        );
-        this.queryData = response.data.filteredQuery;
+        let response = await this.$axios.get('/menu?name=' + value)
+        this.queryData = response.data.filteredQuery
         this.menuCardData = this.queryData
         console.log(process.env.BASE_URL)
-        console.log(this.queryData.__ob__.value[0].name);
+        console.log(this.queryData.__ob__.value[0].name)
 
-        componentData = this.queryData;
+        componentData = this.queryData
       } catch (err) {
-        console.log(err);
+        console.log(err)
       }
-
-    },async getValues(){
-      try{
-        let res = await this.$axios.get("/menu")
-        this.menuCardData = res.data.coffees;
-      }catch(err){
+    },
+    async getValues() {
+      try {
+        let res = await this.$axios.get('/menu')
+        this.menuCardData = res.data.coffees
+      } catch (err) {
         console.log(err)
       }
     },
     searchFunction(value) {
-      let data = value.data.filterByName;
+      let data = value.data.filterByName
       for (let i = 0; i < data.length; i++) {
-        const currentArray = data[i];
-        const currentArrayName = currentArray.name;
+        const currentArray = data[i]
+        const currentArrayName = currentArray.name
         for (const data of componentData) {
           if (currentArrayName.includes(data)) {
-            arrayOfNames = currentArrayName;
-            compared = true;
+            arrayOfNames = currentArrayName
+            compared = true
           }
         }
       }
     },
   },
-};
+}
 </script>
 
 <style scoped>
-body{
+body {
   overflow-y: scroll;
 }
 .menu-box {
@@ -196,13 +201,11 @@ body{
   position: absolute;
   width: 90%;
   height: 50%;
-  background-color: #9e5e3b69;
+  background-color: rgba(255, 255, 255, 0.192);
   top: 30%;
   right: 5%;
-  padding: 50px;
-
+  padding: 30px;
 }
-
 
 .menu-box {
   overflow: scroll;
@@ -242,12 +245,11 @@ body{
 .container-buttons .button-group div {
   padding-left: 3rem;
 }
-.footer-main{
+.footer-main {
   position: absolute;
-  bottom : -300px;
+  bottom: -300px;
   right: 30%;
   z-index: -1;
-
 }
 @media screen and (max-width: 1200px) {
   .input-group {

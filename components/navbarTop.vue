@@ -48,16 +48,14 @@ export default {
 .bg-info {
   background-color: transparent !important;
 }
-.navbar{
-  border-bottom: 1px solid #191412;
-}
+
 .Hermanos {
   font-size: 2.7rem;
-  color: #191412 !important;
+  color: #fff !important;
   font-family: 'PT Sans Narrow', sans-serif;
 }
 a {
-  color: #191412 !important;
+  color: #fff !important;
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 2.3rem;
 }

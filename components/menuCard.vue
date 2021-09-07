@@ -16,7 +16,7 @@
        <h3>{{ price }}</h3>
       </b-card-text>
 
-      <b-button href="#" variant="primary" v-on:click="register_push(name, price)"
+      <b-button href="#" variant="primary" v-on:click="$store.dispatch('register_push')"
         >Sepete Ekle</b-button
       >
     </b-card>
@@ -25,7 +25,6 @@
 
 
 <script>
-
 export default {
   
   name: "menuCard",
@@ -34,13 +33,19 @@ export default {
     price: String,
     imgSrc:String,
   },
-  methods: {
-    register_push: function (productname, price) {
-      this.$router.push({ path: "/edit" })
-      console.log(productname, price);
+  computed: {
+    products() {
+      return this.$store.state.products
     },
-  },
+    order(){
+      return this.$store.state.order
+    }
+    },
+  mounted (){
+    return this.$store.state.order
+    console.log(this.name)
 
+  }
 };
 </script>
 
