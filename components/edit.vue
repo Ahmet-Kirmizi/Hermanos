@@ -16,7 +16,7 @@ import navBarTop from '../components/navbarTop.vue'
 import axios from 'axios'
 export default {
   mounted() {
-    this.getCardData()
+
   },
   props: {
   },
@@ -29,7 +29,7 @@ export default {
       this.$store.commit('change', event.target.value)
       console.log(this.$store)
     },
-
+/*
     async getCardData() {
       try {
         let cardData = await axios.get(
@@ -41,6 +41,7 @@ export default {
         console.log(err)
       }
     },
+    */
   },
 }
 </script>

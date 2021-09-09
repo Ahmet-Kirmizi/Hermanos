@@ -9,7 +9,7 @@ Vue.use(Vuex);
 //to handle state
 export const state = () => ({
   products : [],
-  order : []
+  cart : []
 })
 
 //to handle state
@@ -23,10 +23,11 @@ export const actions = {
         commit('set_products', response.data)
       })
   },
-  register_push({commit,productname, price}) {
+  addProductToCart({commit}, {name, price, quantity}){
+    commit('ADD_TO_CART', {name , price, quantity})
     this.$router.push({ path: "/edit" });
-    commit('set_order', productname, price)
-  },
+
+  }
 }
 
 //to handle mutations
@@ -34,8 +35,12 @@ export const mutations = {
   set_products(state, products) {
     state.products = products
   },
-  set_order(state, order){
-    state.order = order
-  }
+ADD_TO_CART(state, {name, price, quantity}){
+    state.cart.push({
+      name,
+      price,
+      quantity
+    })
+}
 }
 

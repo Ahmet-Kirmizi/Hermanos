@@ -8,15 +8,15 @@
       style="max-width: 15rem"
       class="mb-2 kart"
     >
-      <b-card-title>
+      <b-card-title v-model="name">
         <h2>{{ name }}</h2>
       </b-card-title>
 
-      <b-card-text>
+      <b-card-text v-model="price">
        <h3>{{ price }}</h3>
       </b-card-text>
 
-      <b-button href="#" variant="primary" v-on:click="$store.dispatch('register_push')"
+      <b-button href="#" variant="primary" v-on:click="addToCart()"
         >Sepete Ekle</b-button
       >
     </b-card>
@@ -26,25 +26,28 @@
 
 <script>
 export default {
-  
   name: "menuCard",
   props: {
     name: String,
     price: String,
     imgSrc:String,
   },
+  methods : {
+    addToCart() {
+      this.$store.dispatch('addProductToCart', {
+        name  : this.name,
+        price :  this.price,
+        quantity : 1
+      })
+    }
+  },
   computed: {
     products() {
       return this.$store.state.products
     },
-    order(){
-      return this.$store.state.order
-    }
     },
   mounted (){
-    return this.$store.state.order
-    console.log(this.name)
-
+    return this.$store.state.order;
   }
 };
 </script>
