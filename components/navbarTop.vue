@@ -53,11 +53,13 @@ export default {
   font-size: 2.7rem;
   color: #fff !important;
   font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bolder;
 }
 a {
   color: #fff !important;
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 2.3rem;
+  font-weight: bolder;
 }
 .navigationlinks {
   font-size: 2.5rem;

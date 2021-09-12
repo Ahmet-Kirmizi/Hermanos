@@ -141,10 +141,13 @@ export default {
     products() {
       return this.$store.state.products
     },
-
+    productData(){
+      return this.$store.state.productData
+    }
   },
   mounted() {
     this.$store.dispatch('getProducts')
+    this.$store.dispatch('getProductData')
     this.getValues()
     this.getCompValue()
   },

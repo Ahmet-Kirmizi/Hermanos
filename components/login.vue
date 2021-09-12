@@ -116,6 +116,7 @@ export default {
     };
   },
   mounted() {
+    //
     var tablinks = document.querySelectorAll("div.tablinks");
 
     for (var i = 0; i < tablinks.length; i++) {
@@ -182,7 +183,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
 #account-section {

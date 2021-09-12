@@ -9,7 +9,8 @@ Vue.use(Vuex);
 //to handle state
 export const state = () => ({
   products : [],
-  cart : []
+  cart : [],
+  productData : []
 })
 
 //to handle state
@@ -26,7 +27,11 @@ export const actions = {
   addProductToCart({commit}, {name, price, quantity}){
     commit('ADD_TO_CART', {name , price, quantity})
     this.$router.push({ path: "/edit" });
-
+  },
+  getProductData({commit}){
+    this.$axios.get("sendCardData").then(response => {
+      commit('SET_PRODUCT_DATA', response.data)
+    })
   }
 }
 
@@ -41,6 +46,9 @@ ADD_TO_CART(state, {name, price, quantity}){
       price,
       quantity
     })
+},
+SET_PRODUCT_DATA(state, productData){
+  state.productData = productData
 }
 }
 
