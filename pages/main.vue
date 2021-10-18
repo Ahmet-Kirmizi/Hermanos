@@ -46,13 +46,11 @@
 </template>
 <script>
 import navbarTop from '../components/navbarTop.vue'
-import loginForm from '../components/login.vue'
 import backgroundImg from '../components/backgroundImg.vue'
 import footerHermanos from '../components/footer.vue'
 export default {
   components: {
     navbarTop,
-    loginForm,
     backgroundImg,
     footerHermanos,
   },

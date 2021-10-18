@@ -40,11 +40,6 @@ export default {
   background-color: white;
 }
 
-/* a.nav-link {
-    text-align: center;
-    background-color: black;
-} */
-
 .bg-info {
   background-color: transparent !important;
 }
