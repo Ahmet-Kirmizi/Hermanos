@@ -2,11 +2,23 @@
   <div>
     <background-img />
     <navbar-top />
-    <div class="h-100 d-flex align-items-center justify-content-center pt-4">
-      <b-card no-body class="overflow-hidden" style="max-width: 1200px; max-height: 400px;">
+
+    <div class="h-100 d-flex align-items-center justify-content-center pt-4 ">
+      <b-card class="text-center">
+        <div class="bg-secondary text-light">
+          This is some content within the default <samp>&lt;b-card-body&gt;</samp> block of the
+          <samp>&lt;b-card&gt;</samp> component. Notice the padding between the card's border and this
+          gray <samp>&lt;div&gt;</samp>.
+        </div>
+      </b-card>
+    </div>
+
+    <div class="h-100 d-flex align-items-center justify-content-center pt-4 ">
+      <b-card no-body class="overflow-hidden" style="max-width: 1600px; max-height: 500px;">
         <b-row no-gutters>
           <b-col md="6">
-            <b-card-img :src="this.menuCardData" alt="Image" class="rounded-0"></b-card-img>
+            <b-card-img src="https://i.hizliresim.com/6d22is5.png" alt="Image" class="rounded-0 center" img-height="700"
+              img-width="700"></b-card-img>
           </b-col>
           <b-col md="6">
             <b-card-body title="Horizontal Card">
@@ -55,7 +67,6 @@ export default {
     }
   },
   mounted() {
-    this.getValues()
 
   },
   methods: {
@@ -76,7 +87,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Serif:wght@700&display=swap');
 
 body {
-  overflow-y: scroll;
+  overflow-y: scroll !important;
 }
 
 ::-webkit-scrollbar {
